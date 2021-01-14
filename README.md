@@ -1,4 +1,4 @@
-<h1 align="center">Choo</h1>
+<h1 align="center">DeFi-Desktop</h1>
 
 <div align="center">
   :steam_locomotive::train::train::train::train::train:
