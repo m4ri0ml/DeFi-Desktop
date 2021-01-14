@@ -18,126 +18,53 @@ class MainWindow(QMainWindow):
         self.tabs.setTabsClosable(True) 
         self.tabs.tabCloseRequested.connect(self.close_current_tab)  
         self.setCentralWidget(self.tabs)
+        self.setWindowTitle("DeFi-Desktop | The ultimate DeFi desktop experience")
+        self.showMaximized()
 
         self.status = QStatusBar()
         self.status.setFont(QFont('Segoe UI', 20)) 
         self.status.setStyleSheet("QStatusBar { border: 1px solid black } !important;") 
         self.setStatusBar(self.status)
 
-        bitcoin_label = QLabel("Bitcoin: ")
         self.bitcoin_price = QLabel(get_price("bitcoin"))
-        ethereum_label = QLabel("Ethereum: ")
         self.ethereum_price = QLabel(get_price("ethereum"))
-        aave_label = QLabel("Aave: ")
         self.aave_price = QLabel(get_price("aave"))
-        maker_label = QLabel("Maker: ")
         self.maker_price = QLabel(get_price("maker"))
-        yfi_label = QLabel("YFI: ")
         self.yfi_price = QLabel(get_price("yearn-finance"))
-        uniswap_label = QLabel("Uniswap: ")
         self.uniswap_price = QLabel(get_price("uniswap"))
-        sushiswap_label = QLabel("Sushiswap: ")
         self.sushiswap_price = QLabel(get_price("sushiswap"))
-        compound_label = QLabel("Compound: ")
         self.compound_price = QLabel(get_price("compound"))
-        snx_label = QLabel("Synthetix: ")
         self.snx_price = QLabel(get_price("synthetix-network-token"))
 
-        btc = QLabel()
-        btc_pixmap = QPixmap('static/images/btc25.png')
-        btc.setPixmap(btc_pixmap)
+        coin_prices = [self.bitcoin_price, self.ethereum_price, self.aave_price, self.maker_price, self.yfi_price, self.uniswap_price, self.sushiswap_price, self.compound_price, self.snx_price]
+        coin_names = ["Bitcoin: ", "Ethereum: ", "Aave: ", "Maker: ", "YFI: ", "Sushiswap: ", "Uniswap:", "Compound: ", "Synthetix: "]
+        coin_images = ["btc25.png", "eth25.png", "aave25.png", "maker25.png", "yfi25.png", "uniswap25.png", "sushi25.png", "comp25.png", "snx25.png"]
 
-        eth = QLabel()
-        eth_pixmap = QPixmap('static/images/eth25.png')
-        eth.setPixmap(eth_pixmap)
+        # Add widgets to status bar
+        for i in range(0, 9):
+            icon = QLabel()
+            icon_pixmap = QPixmap('static/images/' + coin_images[i])
+            icon.setPixmap(icon_pixmap)
 
-        aave = QLabel()
-        aave_pixmap = QPixmap('static/images/aave25.png')
-        aave.setPixmap(aave_pixmap)
-
-        maker = QLabel()
-        maker_pixmap = QPixmap('static/images/maker25.png')
-        maker.setPixmap(maker_pixmap)
-
-        yfi = QLabel()
-        yfi_pixmap = QPixmap('static/images/yfi25.png')
-        yfi.setPixmap(yfi_pixmap)
-
-        uniswap = QLabel()
-        uniswap_pixmap = QPixmap('static/images/uniswap25.png')
-        uniswap.setPixmap(uniswap_pixmap)
-
-        sushiswap = QLabel()
-        sushiswap_pixmap = QPixmap('static/images/sushi25.png')
-        sushiswap.setPixmap(sushiswap_pixmap)
-
-        compound = QLabel()
-        compound_pixmap = QPixmap('static/images/comp25.png')
-        compound.setPixmap(compound_pixmap)
-
-        snx = QLabel()
-        snx_pixmap = QPixmap('static/images/snx25.png')
-        snx.setPixmap(snx_pixmap)
-
-        self.status.addWidget(VLine())
-        self.status.addWidget(btc)
-        self.status.addWidget(bitcoin_label)
-        self.status.addWidget(self.bitcoin_price)
-        self.status.addWidget(VLine())
-        self.status.addWidget(eth)
-        self.status.addWidget(ethereum_label)
-        self.status.addWidget(self.ethereum_price)
-        self.status.addWidget(VLine())
-        self.status.addWidget(aave)
-        self.status.addWidget(aave_label)
-        self.status.addWidget(self.aave_price)
-        self.status.addWidget(VLine())
-        self.status.addWidget(maker)
-        self.status.addWidget(maker_label)
-        self.status.addWidget(self.maker_price)
-        self.status.addWidget(VLine())
-        self.status.addWidget(yfi)
-        self.status.addWidget(yfi_label)
-        self.status.addWidget(self.yfi_price)
-        self.status.addWidget(VLine())
-        self.status.addWidget(uniswap)
-        self.status.addWidget(uniswap_label)
-        self.status.addWidget(self.uniswap_price)
-        self.status.addWidget(VLine())
-        self.status.addWidget(sushiswap)
-        self.status.addWidget(sushiswap_label)
-        self.status.addWidget(self.sushiswap_price)
-        self.status.addWidget(VLine())
-        self.status.addWidget(compound)
-        self.status.addWidget(compound_label)
-        self.status.addWidget(self.compound_price)
-        self.status.addWidget(VLine())
-        self.status.addWidget(snx)
-        self.status.addWidget(snx_label)
-        self.status.addWidget(self.snx_price)
+            self.status.addWidget(VLine())
+            self.status.addWidget(icon)
+            self.status.addWidget(QLabel(coin_names[i]))
+            self.status.addWidget(coin_prices[i])
         self.status.addWidget(VLine())
 
         self.setStyleSheet(""" QTabBar::tab:selected {background: AliceBlue;} <!--QTabWidget>QWidget>QWidget{background: red;}--> """)
 
         self.sound = QSound("static/sounds/update_sound.wav") # This plays when prices are updated.
 
-        # Creating first tabs 
-        self.add_new_tab(QUrl('http://app.aave.com'), '         AAVE         ')
-        self.add_new_tab(QUrl('http://compound.finance'), '        Compound        ')
-        self.add_new_tab(QUrl('http://oasis.app/borrow'), '        MakerDAO        ')
-        self.add_new_tab(QUrl('http://yearn.finance'), '         Yearn         ')
-        self.add_new_tab(QUrl('http://harvest.finance'), '        Harvest        ')
-        self.add_new_tab(QUrl('http://app.uniswap.org'), '         Uniswap        ')
-        self.add_new_tab(QUrl('http://sushiswap.fi'), '         Sushiswap         ')
-        self.add_new_tab(QUrl('http://zapper.fi'), '         Zapper         ') 
+        tab_list = {'http://app.aave.com': '         AAVE         ', 'http://compound.finance': '        Compound        ', 'http://oasis.app/borrow': '        MakerDAO        ', 'http://yearn.finance': '         Yearn         ', 'http://harvest.finance': '        Harvest        ', 'http://app.uniswap.org': '         Uniswap        ', 'http://sushiswap.fi': '         Sushiswap         ', 'http://zapper.fi': '         Zapper         '}
+        
+        # Create all tabs        
+        for x in tab_list.keys():
+            self.add_new_tab(QUrl(x), tab_list[x])
 
-        self.update_prices() # Timer to update cryptocurrency prices
-
+        self.update_prices()
         self.show() 
-   
-        self.setWindowTitle("DeFi-Desktop | The ultimate DeFi desktop experience")
-        self.showMaximized()
-
+ 
     def add_new_tab(self, qurl = None, label = "Blank"): 
    
         if qurl is None:  
@@ -146,19 +73,20 @@ class MainWindow(QMainWindow):
         browser = QWebEngineView()  
         browser.setUrl(qurl) 
   
-        # Set tab index
+        # setting tab index 
         i = self.tabs.addTab(browser, label) 
         self.tabs.setCurrentIndex(i) 
   
+        # adding action to the browser when loading is finished 
+        # set the tab title 
         browser.loadFinished.connect(lambda _, i = i, browser = browser: self.tabs.setTabText(i, label)) 
   
-    def tab_open_doubleclick(self, i):  
-        # No tab under the click 
-        if i == -1:  
+    def tab_open_doubleclick(self, i):   
+        if i == -1: # No tab under the click
             self.add_new_tab()
    
     def close_current_tab(self, i):  
-        if self.tabs.count() < 2:  # if there is only one tab
+        if self.tabs.count() < 2: # if there is only one tab
             return 
         self.tabs.removeTab(i)
 
@@ -177,7 +105,6 @@ class MainWindow(QMainWindow):
             QTimer.singleShot(600000, self.update_prices) # 10m
 
 class VLine(QFrame):
-    # a simple VLine, like the one you get from designer
     def __init__(self):
         super(VLine, self).__init__()
         self.setFrameShape(self.VLine|self.Sunken)
