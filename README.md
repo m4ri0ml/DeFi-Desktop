@@ -4,10 +4,10 @@
   :steam_locomotive::train::train::train::train::train:
 </div>
 <div align="center">
-  <strong>Built with ❤︎ by m4ri0ml </strong>
+  <strong>The ultimate <code>DeFi</code> management desktop GUI.</strong>
 </div>
 <div align="center">
-  The ultimate desktop <code>DeFi</code> management GUI.
+  Built with ❤︎ by m4ri0ml 
 </div>
 
 <br />
