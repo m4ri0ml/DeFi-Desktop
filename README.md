@@ -38,10 +38,11 @@
 
 ## Table of Contents
 - [Features](#features)
-- [Pictures](#example)
-- [How to Run](#run)
+- [Pictures](#pictures)
+- [How to Run](#how-to-run)
+- [Philosophy](#philosophy)
+- [External DApp Links](#external-dapp-links)
 - [FAQ](#faq)
-- [See Also](#see-also)
 - [Support](#support)
 
 ## Features
