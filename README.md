@@ -63,7 +63,7 @@
 TO-BE-MADE
 
 ## Philosophy
-At the begging I was planning to build this proyect as private-source for personal use but I believe a all-in-one open-sourced desktop GUI to view and manage the main DeFi DApps would be something that the Ethereum community would like and benefit from, so thats why I decided to create this repository and let other contribute to the proyect too! :)
+At the begining I was planning to build this proyect as private-source for personal use but I believe a all-in-one open-sourced desktop GUI to view and manage the main DeFi DApps would be something that the Ethereum community would like and benefit from, so thats why I decided to create this repository and let other contribute to the proyect too! :)
 
 ### External DApp Links
 Although navigating and interacting with DApps like Aave, Compound or Uniswap is fully functional keep in mind that DApp links that redirect to external pages (eg. External Documentation links, Terms of Service pages etc.) wont work!
