@@ -1,22 +1,25 @@
 <h1 align="center">DeFi-Desktop</h1>
 
 <div align="center">
-  :steam_locomotive::train::train::train::train::train:
+  ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫
+  <br />
 </div>
 <div align="center">
   <strong>The ultimate <code>DeFi</code> management desktop GUI.</strong>
 </div>
 <div align="center">
-  Built with ❤︎ by m4ri0ml 
+  Built with ❤︎ by m4ri0ml
+  <br />
+  ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫Ξ⧫
 </div>
 
 <br />
 
 <div align="center">
   <!-- Standard -->
-  <a href="https://standardjs.com">
+  <a href="https://www.python.org/dev/peps/pep-0008/">
     <img src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square"
-      alt="Standard" />
+      alt="Code Standard" />
   </a>
 </div>
 
@@ -53,7 +56,8 @@
 - __Configuration File:__ Coming soon!
 
 ## Pictures
-TO-BE-MADE
+![aave](https://i.imgur.com/oR7mZxk.png)
+![sushiswap](https://i.imgur.com/kyAnjbc.png)
 
 ## How to Run
 TO-BE-MADE
@@ -69,11 +73,8 @@ Although navigating and interacting with DApps like Aave, Compound or Uniswap is
 Example Answer
 
 ## Support
-Creating a quality framework takes a lot of time. Unlike others frameworks,
-Choo is completely independently funded. We fight for our users. This does mean
-however that we also have to spend time working contracts to pay the bills.
-This is where you can help: by chipping in you can ensure more time is spent
-improving Choo rather than dealing with distractions.
+If you need help contact me on twitter. (Link on my profile). 
+I will create a telegram channel if this proyects gets a lot of users.
 
 
 ## License
